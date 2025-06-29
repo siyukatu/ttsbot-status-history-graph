@@ -1,4 +1,4 @@
-name: write today's btc/usd
+name: generate-graph
 
 on:
   workflow_dispatch:
