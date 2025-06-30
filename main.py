@@ -97,7 +97,7 @@ async def on_ready():
                 bot_id = str(member.id)
                 if bot_id in bots:
                     online = member.status == bots[bot_id].get("online", discord.Status.online)
-                    data[bot]["online"] = online
+                    data[bot_id]["online"] = online
                     reading_count = None
                     server_count = None
                     activity = None
@@ -109,10 +109,10 @@ async def on_ready():
                         if match:
                             if "reading" in bots[bot_id]:
                                 reading_count = int(match.group(bots[bot_id]["reading"]))
-                                data[bot]["reading"] = reading_count
+                                data[bot_id]["reading"] = reading_count
                             if "server" in bots[bot_id]:
                                 server_count = int(match.group(bots[bot_id]["server"]))
-                                data[bot]["server"] = server_count
+                                data[bot_id]["server"] = server_count
                     print(f"Bot ID: {bot_id}, Reading: {reading_count}, Servers: {server_count}, Online: {online}")
             except:continue
     except:pass
