@@ -134,7 +134,7 @@ for bot in latest_data.keys():
         if bot in online_data[hour]:
             date = datetime.fromtimestamp(int(hour) * 3600)
             time_list.append(date)
-            if online_data[hour][bot]["online"] and "reading" in online_data[hour][bot]["reading"]:
+            if online_data[hour][bot]["online"] and "reading" in online_data[hour][bot]:
                 ping_list.append(online_data[hour][bot]["reading"])
             else:
                 ping_list.append(None)
