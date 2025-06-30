@@ -189,15 +189,15 @@ for bot in latest_data.keys():
         # 両方のグラフを作成（上下に配置）
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
         
-        # 上のグラフ: 読み上げ中
-        ax1.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='#2288ff')
+        # 上のグラフ: 同時接続数
+        ax1.plot(time_list, reading_list, label="同時接続数", linewidth=1.5, color='#2288ff')
         
         for span_start, span_end in spans:
             ax1.axvspan(span_start, span_end, color="gray", alpha=0.3)
         
         ax1.yaxis.set_major_locator(MaxNLocator(integer=True))
         ax1.yaxis.get_major_formatter().set_useOffset(False)
-#        ax1.set_ylabel("読み上げ中")
+#        ax1.set_ylabel("同時接続数")
         ax1.set_title("日時別の使用状況")
         ax1.legend(loc="upper right")
         ax1.grid(True, alpha=0.3)
