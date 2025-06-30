@@ -8,7 +8,7 @@ import json
 import re
 import time
 import math
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from matplotlib import rcParams
 from matplotlib import font_manager
 
@@ -147,7 +147,7 @@ for bot in latest_data.keys():
     reading_list = []
     for hour in online_data.keys():
         if bot in online_data[hour]:
-            date = datetime.fromtimestamp(int(hour) * 900)
+            date = datetime.fromtimestamp(int(hour) * 900, datetime.timezone(datetime.timedelta(hours=9)))
             time_list.append(date)
             if online_data[hour][bot]["online"]:
                 if "reading" in online_data[hour][bot]:
