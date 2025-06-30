@@ -10,41 +10,57 @@ jobs:
   build:
     name: generate-graph
     runs-on: ubuntu-24.04
+
     steps:
+      # リポジトリを浅くチェックアウト
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 1
 
-      - name: Cache pip
-        id: cache-pip
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
+      # Python をセットアップ
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.13.5"
+          python-version: '3.13.5'
 
+      # 仮想環境をキャッシュ（初回は何もなくスキップされます）
+      - name: Cache venv
+        id: cache-venv
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-venv-
+
+      # 仮想環境の作成
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      # 依存ライブラリのインストール（キャッシュヒット時はスキップ）
       - name: Install Dependencies
-        if: steps.cache-pip.outputs.cache-hit != 'true'
+        if: steps.cache-venv.outputs.cache-hit != 'true'
         run: |
+          source .venv/bin/activate
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Graph 生成
       - name: Generate Graph
         run: |
+          source .venv/bin/activate
           python main.py
 
-      - name: Commit and Push
+      # 変更があればコミット＆プッシュ
+      - name: Commit and Push if changed
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add . 
-          git commit -m "Update Graph"
-          git pull
-          git push origin main
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Graph"
+            git push origin main
+          else
+            echo "No changes to commit"
+          fi
