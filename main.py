@@ -9,6 +9,12 @@ import re
 import time
 import math
 from datetime import datetime, timedelta
+from matplotlib import rcParams
+from matplotlib import font_manager
+
+font_path = "./NotoSansJP-Medium.ttf"
+font_prop = font_manager.FontProperties(fname=font_path)
+rcParams['font.family'] = font_prop.get_name()
 
 intents = discord.Intents.none()
 intents.members = True
@@ -126,54 +132,53 @@ print(latest_data)
 if latest_data:
     online_data[str(now_hour_id)] = latest_data
 
+with open("data/history.json", mode="w") as f:
+    f.write(json.dumps(online_data))
+
 bot_history = {}
 for bot in latest_data.keys():
     time_list = []
-    ping_list = []
+    server_list = []
+    reading_list = []
     for hour in online_data.keys():
         if bot in online_data[hour]:
             date = datetime.fromtimestamp(int(hour) * 3600)
             time_list.append(date)
-            if online_data[hour][bot]["online"] and "reading" in online_data[hour][bot]:
-                ping_list.append(online_data[hour][bot]["reading"])
+            if online_data[hour][bot]["online"]:
+                if "reading" in online_data[hour][bot]:
+                    reading_list.append(online_data[hour][bot]["reading"])
+                if "server" in online_data[hour][bot]:
+                    server_list.append(online_data[hour][bot]["server"])
             else:
-                ping_list.append(None)
-    
-    # 3. オフライン期間のスパン検出
+                reading_list.append(None)
+                server_list.append(None)
+
     spans = []
     in_off = False
     for i, t in enumerate(time_list):
-        if ping_list[i] is None and not in_off:
-            # オフライン開始
+        if reading_list[i] is None and not in_off:
             span_start = t
             in_off = True
-        elif ping_list[i] is not None and in_off:
-            # オフライン終了
+        elif reading_list[i] is not None and in_off:
             span_end = t
             spans.append((span_start, span_end))
             in_off = False
-    # 最後までオフラインだった場合の補完
+
     if in_off:
         spans.append((span_start, time_list[-1]))
     
-    # --- プロット ---
-    
     fig, ax = plt.subplots(figsize=(12, 4))
+
+    ax.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5)
     
-    # 折れ線：オンライン部分のみ描画（None は自動的に途切れる）
-    ax.plot(time_list, ping_list, label="Ping (ms)", linewidth=1.5)
-    
-    # オフライン期間を暗く塗りつぶし
     for span_start, span_end in spans:
         ax.axvspan(span_start, span_end, color="gray", alpha=0.3)
     
-    # 軸ラベル・タイトル
     ax.set_xlabel("時刻")
-    ax.set_ylabel("Ping (ms)")
-    ax.set_title("Discord Bot の Ping 推移")
+    ax.set_ylabel("読み上げ中")
+    ax.set_title("日時別の使用状況")
     ax.legend(loc="upper right")
     
-    # x軸の日時を見やすく回転
     fig.autofmt_xdate()
     
     plt.tight_layout()
