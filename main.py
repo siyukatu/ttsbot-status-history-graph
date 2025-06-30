@@ -77,14 +77,14 @@ bots = {
     },
 }
 
-now_hour_id = math.floor(time.time() / 900)
+now_hour_id = math.floor(time.time())
 
 online_data = {}
 try:
     with open("data/history.json") as f:
         online_data = json.loads(f.read())
     for hour in online_data.keys():
-        if int(hour) < now_hour_id - 24 * 7:
+        if int(hour) < now_hour_id - 24 * 7 * 60 * 60:
             del online_data[hour]
 except:pass
 
@@ -147,7 +147,7 @@ for bot in latest_data.keys():
     reading_list = []
     for hour in online_data.keys():
         if bot in online_data[hour]:
-            date = datetime.fromtimestamp(int(hour) * 900, timezone(timedelta(hours=9)))
+            date = datetime.fromtimestamp(int(hour), timezone(timedelta(hours=9)))
             time_list.append(date)
             if online_data[hour][bot]["online"]:
                 if "reading" in online_data[hour][bot]:
