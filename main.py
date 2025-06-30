@@ -147,8 +147,12 @@ for bot in latest_data.keys():
             if online_data[hour][bot]["online"]:
                 if "reading" in online_data[hour][bot]:
                     reading_list.append(online_data[hour][bot]["reading"])
+                else:
+                    reading_list.append(None)
                 if "server" in online_data[hour][bot]:
                     server_list.append(online_data[hour][bot]["server"])
+                else:
+                    server_list.append(None)
             else:
                 reading_list.append(None)
                 server_list.append(None)
