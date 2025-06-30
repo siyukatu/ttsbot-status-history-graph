@@ -190,7 +190,7 @@ for bot in latest_data.keys():
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
         
         # 上のグラフ: 読み上げ中
-        ax1.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='blue')
+        ax1.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='red')
         
         for span_start, span_end in spans:
             ax1.axvspan(span_start, span_end, color="gray", alpha=0.3)
@@ -203,7 +203,7 @@ for bot in latest_data.keys():
         ax1.grid(True, alpha=0.3)
 
         # 下のグラフ: サーバー数
-        ax2.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='blue')
+        ax2.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='red')
         
         for span_start, span_end in spans:
             ax2.axvspan(span_start, span_end, color="gray", alpha=0.3)
