@@ -17,10 +17,13 @@ jobs:
           fetch-depth: 1
 
       - name: Cache pip
+        id: cache-pip
         uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Setup Python
         uses: actions/setup-python@v4
