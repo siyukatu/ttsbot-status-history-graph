@@ -141,7 +141,9 @@ with open("data/history.json", mode="w") as f:
 bot_history = {}
 for bot in latest_data.keys():
     time_list = []
+    server_available = latest_data[bot].get("server") is not None
     server_list = []
+    reading_available = latest_data[bot].get("reading") is not None
     reading_list = []
     for hour in online_data.keys():
         if bot in online_data[hour]:
@@ -174,30 +176,58 @@ for bot in latest_data.keys():
     if in_off:
         spans.append((span_start, time_list[-1]))
     
-    # 2つのグラフを作成（上下に配置）
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
+    # どちらもFalseの場合はグラフ生成を中止
+    if not reading_available and not server_available:
+        print(f"Bot {bot}: 読み上げ・サーバー両方のデータが利用できないため、グラフを生成しません")
+        continue
+    
+    # 利用可能なグラフの数に応じてレイアウトを決定
+    num_plots = sum([reading_available, server_available])
+    
+    if num_plots == 2:
+        # 両方のグラフを作成（上下に配置）
+        fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
+        
+        # 上のグラフ: 読み上げ中
+        ax1.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='blue')
+        
+        for span_start, span_end in spans:
+            ax1.axvspan(span_start, span_end, color="gray", alpha=0.3)
+        
+        ax1.set_ylabel("読み上げ中")
+        ax1.set_title("日時別の使用状況")
+        ax1.legend(loc="upper right")
+        ax1.grid(True, alpha=0.3)
 
-    # 上のグラフ: 読み上げ中
-    ax1.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='blue')
-    
-    for span_start, span_end in spans:
-        ax1.axvspan(span_start, span_end, color="gray", alpha=0.3)
-    
-    ax1.set_ylabel("読み上げ中")
-    ax1.set_title("日時別の使用状況")
-    ax1.legend(loc="upper right")
-    ax1.grid(True, alpha=0.3)
-
-    # 下のグラフ: サーバー数
-    ax2.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='red')
-    
-    for span_start, span_end in spans:
-        ax2.axvspan(span_start, span_end, color="gray", alpha=0.3)
-    
-    ax2.set_xlabel("時刻")
-    ax2.set_ylabel("サーバー数")
-    ax2.legend(loc="upper right")
-    ax2.grid(True, alpha=0.3)
+        # 下のグラフ: サーバー数
+        ax2.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='red')
+        
+        for span_start, span_end in spans:
+            ax2.axvspan(span_start, span_end, color="gray", alpha=0.3)
+        
+        ax2.set_xlabel("時刻")
+        ax2.set_ylabel("サーバー数")
+        ax2.legend(loc="upper right")
+        ax2.grid(True, alpha=0.3)
+        
+    else:
+        # 1つのグラフのみ作成
+        fig, ax = plt.subplots(figsize=(12, 4))
+        
+        if reading_available:
+            ax.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='blue')
+            ax.set_ylabel("読み上げ中")
+        elif server_available:
+            ax.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='red')
+            ax.set_ylabel("サーバー数")
+        
+        for span_start, span_end in spans:
+            ax.axvspan(span_start, span_end, color="gray", alpha=0.3)
+        
+        ax.set_xlabel("時刻")
+        ax.set_title("日時別の使用状況")
+        ax.legend(loc="upper right")
+        ax.grid(True, alpha=0.3)
     
     fig.autofmt_xdate()
     
