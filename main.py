@@ -78,7 +78,7 @@ bots = {
     },
 }
 
-now_hour_id = math.floor(time.time())
+now_hour_id = math.floor(time.time() / 900) * 900
 
 online_data = {}
 try:
