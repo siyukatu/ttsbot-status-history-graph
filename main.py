@@ -196,18 +196,20 @@ for bot in latest_data.keys():
             ax1.axvspan(span_start, span_end, color="gray", alpha=0.3)
         
         ax1.yaxis.set_major_locator(MaxNLocator(integer=True))
+        ax1.yaxis.get_major_formatter().set_useOffset(False)
         ax1.set_ylabel("読み上げ中")
         ax1.set_title("日時別の使用状況")
         ax1.legend(loc="upper right")
         ax1.grid(True, alpha=0.3)
 
         # 下のグラフ: サーバー数
-        ax2.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='red')
+        ax2.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='blue')
         
         for span_start, span_end in spans:
             ax2.axvspan(span_start, span_end, color="gray", alpha=0.3)
         
         ax2.yaxis.set_major_locator(MaxNLocator(integer=True))
+        ax2.yaxis.get_major_formatter().set_useOffset(False)
         ax2.set_xlabel("時刻")
         ax2.set_ylabel("サーバー数")
         ax2.legend(loc="upper right")
