@@ -27,6 +27,15 @@ intents.guilds = True
 
 client = discord.Client(intents=intents)
 
+def get_median(data):
+    half = len(score) // 2
+    score.sort()
+    if len(score) % 2 == 0:
+        mdn = (score[half - 1] + score[half]) / 2.0
+    else:
+        mdn = score[half]
+    return mdn
+
 for p in glob.glob('output/*.png'):
     if os.path.isfile(p):
         os.remove(p)
@@ -198,40 +207,43 @@ for bot in latest_data.keys():
         ax1.yaxis.set_major_locator(MaxNLocator(integer=True))
         ax1.yaxis.get_major_formatter().set_useOffset(False)
 #        ax1.set_ylabel("同時接続数")
-        ax1.set_title("日時別の使用状況")
-        ax1.legend(loc="upper right")
+        ax1.set_title("同時接続数の推移")
+#        ax1.legend(loc="upper right")
         ax1.grid(True, alpha=0.3)
 
         # 下のグラフ: サーバー数
         ax2.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='#2288ff')
-        
+
         for span_start, span_end in spans:
             ax2.axvspan(span_start, span_end, color="gray", alpha=0.3)
-        
+
         ax2.yaxis.set_major_locator(MaxNLocator(integer=True))
         ax2.yaxis.get_major_formatter().set_useOffset(False)
-        ax2.set_xlabel("時刻")
+#        ax2.set_xlabel("時刻")
 #        ax2.set_ylabel("サーバー数")
-        ax2.legend(loc="upper right")
+        ax1.set_title("サーバー数の推移")
+#        ax2.legend(loc="upper right")
         ax2.grid(True, alpha=0.3)
         
     else:
         # 1つのグラフのみ作成
         fig, ax = plt.subplots(figsize=(12, 4))
-        
+
         if reading_available:
             ax.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='#2288ff')
-            ax.set_ylabel("読み上げ中")
+            ax.set_title("同時接続数の推移")
+#            ax.set_ylabel("読み上げ中")
         elif server_available:
             ax.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='#2288ff')
-            ax.set_ylabel("サーバー数")
+            ax.set_title("サーバー数の推移")
+#            ax.set_ylabel("サーバー数")
         
         for span_start, span_end in spans:
             ax.axvspan(span_start, span_end, color="gray", alpha=0.3)
         
         ax.set_xlabel("時刻")
         ax.set_title("日時別の使用状況")
-        ax.legend(loc="upper right")
+#        ax.legend(loc="upper right")
         ax.grid(True, alpha=0.3)
     
     fig.autofmt_xdate()
