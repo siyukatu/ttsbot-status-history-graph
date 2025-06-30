@@ -221,7 +221,7 @@ for bot in latest_data.keys():
         ax2.yaxis.get_major_formatter().set_useOffset(False)
 #        ax2.set_xlabel("時刻")
 #        ax2.set_ylabel("サーバー数")
-        ax1.set_title("サーバー数の推移")
+        ax2.set_title("サーバー数の推移")
 #        ax2.legend(loc="upper right")
         ax2.grid(True, alpha=0.3)
         
