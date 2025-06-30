@@ -190,7 +190,7 @@ for bot in latest_data.keys():
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
         
         # 上のグラフ: 読み上げ中
-        ax1.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='red')
+        ax1.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='#2288ff')
         
         for span_start, span_end in spans:
             ax1.axvspan(span_start, span_end, color="gray", alpha=0.3)
@@ -203,7 +203,7 @@ for bot in latest_data.keys():
         ax1.grid(True, alpha=0.3)
 
         # 下のグラフ: サーバー数
-        ax2.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='red')
+        ax2.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='#2288ff')
         
         for span_start, span_end in spans:
             ax2.axvspan(span_start, span_end, color="gray", alpha=0.3)
@@ -220,10 +220,10 @@ for bot in latest_data.keys():
         fig, ax = plt.subplots(figsize=(12, 4))
         
         if reading_available:
-            ax.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='blue')
+            ax.plot(time_list, reading_list, label="読み上げ中", linewidth=1.5, color='#2288ff')
             ax.set_ylabel("読み上げ中")
         elif server_available:
-            ax.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='red')
+            ax.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='#2288ff')
             ax.set_ylabel("サーバー数")
         
         for span_start, span_end in spans:
