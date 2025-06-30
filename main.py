@@ -1,70 +1,180 @@
-import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
 import os
 import glob
 import random
+import discord
+import requests
+import json
+import re
+import time
+import math
 from datetime import datetime, timedelta
+
+intents = discord.Intents.none()
+intents.members = True
+intents.presences = True
+intents.guilds = True
+
+client = discord.Client(intents=intents)
 
 for p in glob.glob('output/*.png'):
     if os.path.isfile(p):
         os.remove(p)
 
-# --- データ準備 ---
+bots = {
+    "1135864594146005042": {
+        "regex": r"読み上げ中: (\d+)\/\d+ \| サーバー数: (\d+)\/\d+",
+        "reading": 1,
+        "server": 2
+    },
+    "1170665001443405854": {
+        "regex": r"(\d+)Servers \| \d+Users \| VC:(\d+)",
+        "reading": 2,
+        "server": 1
+    },
+    "1330469772915245107": {},
+    "1343805344098553938": {
+        "regex": r"(\d+)サーバー \| (\d+)VC接続中",
+        "reading": 2,
+        "server": 1
+    },
+    "1371465579780767824": {
+        "regex": r"(\d+) servers \| (\d+) VCs",
+        "reading": 2,
+        "server": 1
+    },
+    "518899666637553667": {},
+    "533698325203910668": {},
+    "727508841368911943": {
+        "regex": r"(\d+)servers \| (\d+)VC",
+        "reading": 2,
+        "server": 1
+    },
+    "744238280928919704": {
+        "regex": r"(\d+)servers \| joining (\d+)channels",
+        "reading": 2,
+        "server": 1
+    },
+    "865517105118183434": {},
+    "917633605684056085": {
+        "regex": r"(\d+)\/(\d+)読み上げ中",
+        "reading": 1,
+        "server": 2
+    },
+    "972456281782775859": {
+        "regex": r"(\d+)\/(\d+) サーバー",
+        "reading": 1,
+        "server": 2
+    },
+}
 
-# 1. 時刻リスト（10分おき、24時間分）
-start_time = datetime(2025, 6, 28, 0, 0)
-time_list = [start_time + timedelta(minutes=10*i) for i in range(24*6)]
+now_hour_id = math.floor(time.time() / 3600)
 
-# 2. Ping 値リスト（オンラインは乱数、オフラインは None）
-ping_list = []
-for t in time_list:
-    # オフライン時間帯を定義
-    offline = (
-        datetime(2025, 6, 28, 2, 0) <= t < datetime(2025, 6, 28, 4, 0)
-        or datetime(2025, 6, 28, 18, 0) <= t < datetime(2025, 6, 28, 19, 30)
-    )
-    if offline:
-        ping_list.append(None)
-    else:
-        ping_list.append(random.uniform(30, 100))  # 30〜100ms の乱数
+online_data = {}
+try:
+    with open("data/history.json") as f:
+        online_data = json.loads(f.read())
+    for hour in online_data.keys():
+        if int(hour) < now_hour_id - 24 * 7:
+            del online_data[hour]
+except:pass
 
-# 3. オフライン期間のスパン検出
-spans = []
-in_off = False
-for i, t in enumerate(time_list):
-    if ping_list[i] is None and not in_off:
-        # オフライン開始
-        span_start = t
-        in_off = True
-    elif ping_list[i] is not None and in_off:
-        # オフライン終了
-        span_end = t
-        spans.append((span_start, span_end))
-        in_off = False
-# 最後までオフラインだった場合の補完
-if in_off:
-    spans.append((span_start, time_list[-1]))
+latest_data = None
 
-# --- プロット ---
+@client.event
+async def on_ready():
+    global latest_data
+    print(f"Logged in as {client.user}")
+    guild = client.get_guild(1387592992923324496)
+    data = {}
+    for bot in bots.keys():
+        data[bot] = {
+            "online": False
+        }
+    try:
+        for member in guild.members:
+            try:
+                bot_id = str(member.id)
+                if bot_id in bots:
+                    online = member.status == bots[bot_id].get("online", discord.Status.online)
+                    data[bot]["online"] = online
+                    reading_count = None
+                    server_count = None
+                    activity = None
+                    if member.activity:
+                        activity = member.activity.name
+                    if "regex" in bots[bot_id] and activity:
+                        regex = bots[bot_id]["regex"]
+                        match = re.search(regex, activity)
+                        if match:
+                            if "reading" in bots[bot_id]:
+                                reading_count = int(match.group(bots[bot_id]["reading"]))
+                                data[bot]["reading"] = reading_count
+                            if "server" in bots[bot_id]:
+                                server_count = int(match.group(bots[bot_id]["server"]))
+                                data[bot]["server"] = server_count
+                    print(f"Bot ID: {bot_id}, Reading: {reading_count}, Servers: {server_count}, Online: {online}")
+            except:continue
+    except:pass
+    latest_data = data
+    await client.close()
 
-fig, ax = plt.subplots(figsize=(12, 4))
+client.run("MTM4ODE0NjQ1NzM2NTcwODkxMg.G_74Ny.pZyueQOBe-T-_Dn_AC1kqw8-WK-u9mhI69mNac")
 
-# 折れ線：オンライン部分のみ描画（None は自動的に途切れる）
-ax.plot(time_list, ping_list, label="Ping (ms)", linewidth=1.5)
+print(latest_data)
 
-# オフライン期間を暗く塗りつぶし
-for span_start, span_end in spans:
-    ax.axvspan(span_start, span_end, color="gray", alpha=0.3)
+if latest_data:
+    online_data[str(now_hour_id)] = latest_data
 
-# 軸ラベル・タイトル
-ax.set_xlabel("時刻")
-ax.set_ylabel("Ping (ms)")
-ax.set_title("Discord Bot の Ping 推移")
-ax.legend(loc="upper right")
-
-# x軸の日時を見やすく回転
-fig.autofmt_xdate()
-
-plt.tight_layout()
-plt.savefig("output/test2.png")
+bot_history = {}
+for bot in latest_data.keys():
+    time_list = []
+    ping_list = []
+    for hour in online_data.keys():
+        if bot in online_data[hour]:
+            date = datetime.fromtimestamp(int(hour) * 3600)
+            time_list.append(date)
+            if online and "reading" in online_data[hour]["reading"]:
+                ping_list.append(online_data[hour]["reading"])
+            else:
+                ping_list.append(None)
+    
+    # 3. オフライン期間のスパン検出
+    spans = []
+    in_off = False
+    for i, t in enumerate(time_list):
+        if ping_list[i] is None and not in_off:
+            # オフライン開始
+            span_start = t
+            in_off = True
+        elif ping_list[i] is not None and in_off:
+            # オフライン終了
+            span_end = t
+            spans.append((span_start, span_end))
+            in_off = False
+    # 最後までオフラインだった場合の補完
+    if in_off:
+        spans.append((span_start, time_list[-1]))
+    
+    # --- プロット ---
+    
+    fig, ax = plt.subplots(figsize=(12, 4))
+    
+    # 折れ線：オンライン部分のみ描画（None は自動的に途切れる）
+    ax.plot(time_list, ping_list, label="Ping (ms)", linewidth=1.5)
+    
+    # オフライン期間を暗く塗りつぶし
+    for span_start, span_end in spans:
+        ax.axvspan(span_start, span_end, color="gray", alpha=0.3)
+    
+    # 軸ラベル・タイトル
+    ax.set_xlabel("時刻")
+    ax.set_ylabel("Ping (ms)")
+    ax.set_title("Discord Bot の Ping 推移")
+    ax.legend(loc="upper right")
+    
+    # x軸の日時を見やすく回転
+    fig.autofmt_xdate()
+    
+    plt.tight_layout()
+    plt.savefig("output/"+bot+".png")
