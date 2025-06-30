@@ -11,6 +11,7 @@ import math
 from datetime import datetime, timedelta, timezone
 from matplotlib import rcParams
 from matplotlib import font_manager
+from matplotlib.ticker import MaxNLocator
 
 font_path = os.path.join(os.path.dirname(__file__), "NotoSansJP-Medium.ttf")
 font_manager.fontManager.addfont(font_path)
@@ -194,6 +195,7 @@ for bot in latest_data.keys():
         for span_start, span_end in spans:
             ax1.axvspan(span_start, span_end, color="gray", alpha=0.3)
         
+        ax1.yaxis.set_major_locator(MaxNLocator(integer=True))
         ax1.set_ylabel("読み上げ中")
         ax1.set_title("日時別の使用状況")
         ax1.legend(loc="upper right")
@@ -205,6 +207,7 @@ for bot in latest_data.keys():
         for span_start, span_end in spans:
             ax2.axvspan(span_start, span_end, color="gray", alpha=0.3)
         
+        ax2.yaxis.set_major_locator(MaxNLocator(integer=True))
         ax2.set_xlabel("時刻")
         ax2.set_ylabel("サーバー数")
         ax2.legend(loc="upper right")
