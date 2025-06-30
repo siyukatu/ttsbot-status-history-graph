@@ -77,7 +77,7 @@ bots = {
     },
 }
 
-now_hour_id = math.floor(time.time() / 3600)
+now_hour_id = math.floor(time.time() / 900)
 
 online_data = {}
 try:
@@ -147,7 +147,7 @@ for bot in latest_data.keys():
     reading_list = []
     for hour in online_data.keys():
         if bot in online_data[hour]:
-            date = datetime.fromtimestamp(int(hour) * 3600)
+            date = datetime.fromtimestamp(int(hour) * 900)
             time_list.append(date)
             if online_data[hour][bot]["online"]:
                 if "reading" in online_data[hour][bot]:
