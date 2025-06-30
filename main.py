@@ -12,9 +12,12 @@ from datetime import datetime, timedelta
 from matplotlib import rcParams
 from matplotlib import font_manager
 
-font_path = "NotoSansJP-Medium.ttf"
-font_prop = font_manager.FontProperties(fname=font_path)
-rcParams['font.family'] = font_prop.get_name()
+font_path = os.path.join(os.path.dirname(__file__), "NotoSansJP-Medium.ttf")
+font_manager.fontManager.addfont(font_path)
+prop = font_manager.FontProperties(fname=font_path)
+font_name = prop.get_name()
+plt.rcParams['font.family'] = font_name
+plt.rcParams['font.sans-serif'] = [font_name]
 
 intents = discord.Intents.none()
 intents.members = True
