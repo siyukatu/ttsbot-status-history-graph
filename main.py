@@ -176,7 +176,11 @@ for bot in latest_data.keys():
     in_off = False
     for i, t in enumerate(time_list):
         if reading_list[i] is None and not in_off:
-            span_start = t
+            # オフライン期間の開始は次のデータポイントから
+            if i + 1 < len(time_list):
+                span_start = time_list[i + 1]
+            else:
+                span_start = t
             in_off = True
         elif reading_list[i] is not None and in_off:
             span_end = t
