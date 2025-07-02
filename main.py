@@ -87,7 +87,7 @@ bots = {
     },
 }
 
-now_hour_id = math.floor(time.time() / 900) * 900
+now_hour_id = math.floor(time.time() / 300) * 300
 
 online_data = {}
 try:
@@ -138,7 +138,7 @@ async def on_ready():
     latest_data = data
     await client.close()
 
-client.run("MTM4ODE0NjQ1NzM2NTcwODkxMg.G_74Ny.pZyueQOBe-T-_Dn_AC1kqw8-WK-u9mhI69mNac")
+client.run(os.environ.get("DISCORD_TOKEN"))
 
 print(latest_data)
 
