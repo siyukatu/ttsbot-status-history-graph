@@ -48,6 +48,8 @@ jobs:
 
       # Graph 生成
       - name: Generate Graph
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         run: |
           source .venv/bin/activate
           python main.py
