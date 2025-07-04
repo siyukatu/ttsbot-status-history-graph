@@ -17,7 +17,7 @@ from matplotlib import font_manager
 from matplotlib.ticker import MaxNLocator
 from matplotlib.backends.backend_svg import FigureCanvasSVG
 
-options = scour.sanitizeOptions()
+opts = scour.sanitizeOptions()
 opts.remove_metadata = True
 opts.remove_descriptive_elements = True
 opts.remove_titles = True
@@ -295,4 +295,4 @@ for bot in latest_data.keys():
     canvas.print_svg(buf)
     svg_raw = buf.getvalue()
     with open("output/"+bot+".svg", "w", encoding="utf-8") as f:
-        f.write(scour.scourString(svg_raw, options=options))
+        f.write(scour.scourString(svg_raw, options=opts))
