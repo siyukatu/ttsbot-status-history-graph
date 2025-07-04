@@ -3,3 +3,4 @@ matplotlib==3.10.3
 pillow==11.2.1
 discord.py==2.5.2
 msgpack==1.1.1
+scour==0.38.2
