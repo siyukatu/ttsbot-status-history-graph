@@ -19,6 +19,7 @@ prop = font_manager.FontProperties(fname=font_path)
 font_name = prop.get_name()
 plt.rcParams['font.family'] = font_name
 plt.rcParams['font.sans-serif'] = [font_name]
+plt.rc("svg", fonttype="none")
 
 intents = discord.Intents.none()
 intents.members = True
