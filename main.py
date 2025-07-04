@@ -5,6 +5,7 @@ import random
 import discord
 import requests
 import json
+import io
 import re
 import time
 import math
@@ -13,6 +14,7 @@ from datetime import datetime, timedelta, timezone
 from matplotlib import rcParams
 from matplotlib import font_manager
 from matplotlib.ticker import MaxNLocator
+from matplotlib.backends.backend_svg import FigureCanvasSVG
 
 font_path = os.path.join(os.path.dirname(__file__), "NotoSansJP-Medium.ttf")
 font_manager.fontManager.addfont(font_path)
@@ -257,9 +259,15 @@ for bot in latest_data.keys():
         ax.set_title("日時別の使用状況")
 #        ax.legend(loc="upper right")
         ax.grid(True, alpha=0.3)
-    
+
     fig.autofmt_xdate()
-    
+
     plt.tight_layout()
     plt.savefig("output/"+bot+".png")
-    plt.savefig("output/"+bot+".svg")
+
+    buf = io.StringIO()
+    canvas = FigureCanvasSVG(fig)
+    canvas.print_svg(buf)
+    svg_raw = buf.getvalue()
+    with open("output/"+bot+".svg", "w", encoding="utf-8") as f:
+        f.write(svg_raw)
