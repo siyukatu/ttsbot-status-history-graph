@@ -10,7 +10,7 @@ import re
 import time
 import math
 import msgpack
-import scour
+from scour import scour
 from datetime import datetime, timedelta, timezone
 from matplotlib import rcParams
 from matplotlib import font_manager
