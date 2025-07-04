@@ -253,3 +253,4 @@ for bot in latest_data.keys():
     
     plt.tight_layout()
     plt.savefig("output/"+bot+".png")
+    plt.savefig("output/"+bot+".svg")
