@@ -8,6 +8,7 @@ import json
 import re
 import time
 import math
+import msgpack
 from datetime import datetime, timedelta, timezone
 from matplotlib import rcParams
 from matplotlib import font_manager
@@ -93,8 +94,12 @@ now_hour_id = math.floor(time.time() / 300) * 300
 
 online_data = {}
 try:
-    with open("data/history.json") as f:
-        online_data = json.loads(f.read())
+    try:
+        with open("data/history.dat", mode="rb") as f:
+            online_data = msgpack.unpackb(f.read())
+    except:
+        with open("data/history.json") as f:
+            online_data = json.loads(f.read())
     for hour in online_data.keys():
         if int(hour) < now_hour_id - 24 * 7 * 60 * 60:
             del online_data[hour]
@@ -147,6 +152,8 @@ print(latest_data)
 if latest_data:
     online_data[str(now_hour_id)] = latest_data
 
+with open("data/history.dat", mode="wb") as f:
+    f.write(msgpack.packb(online_data))
 with open("data/history.json", mode="w") as f:
     f.write(json.dumps(online_data))
 
