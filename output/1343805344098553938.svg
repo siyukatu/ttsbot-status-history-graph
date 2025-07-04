@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-<svg width="864pt" height="576pt" version="1.1" viewBox="0 0 864 576" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" viewBox="0 0 864 576" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
@@ -10,407 +9,407 @@
   </g>
   <g id="g">
    <g id="h">
-    <path d="m32.583 262.97h820.62v-236.09h-820.62z" fill="#fff"/>
+    <path d="m32.561 262.97h820.64v-236.09h-820.64z" fill="#fff"/>
    </g>
    <g id="i">
     <g id="j">
      <g id="k">
-      <path d="m54.475 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m54.481 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="l">
       <defs>
        <path id="b" d="m0 0v3.5" stroke="#000" stroke-width=".8"/>
       </defs>
-      <use x="54.475049" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="54.480728" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
     </g>
     <g id="m">
      <g id="n">
-      <path d="m150.82 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m150.66 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="o">
-      <use x="150.823981" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="150.65978" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
     </g>
     <g id="p">
      <g id="q">
-      <path d="m247.17 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m246.84 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="r">
-      <use x="247.172913" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="246.838832" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
     </g>
     <g id="s">
      <g id="t">
-      <path d="m343.52 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m343.02 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="u">
-      <use x="343.521845" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="343.017884" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
     </g>
     <g id="v">
      <g id="w">
-      <path d="m439.87 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m439.2 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="x">
-      <use x="439.870777" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="439.196936" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
     </g>
     <g id="y">
      <g id="z">
-      <path d="m536.22 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m535.38 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="aa">
-      <use x="536.219709" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="535.375988" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
     </g>
     <g id="ab">
      <g id="ac">
-      <path d="m632.57 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m631.56 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="ad">
-      <use x="632.56864" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="631.55504" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
     </g>
     <g id="ae">
      <g id="af">
-      <path d="m728.92 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m727.73 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="ag">
-      <use x="728.917572" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="727.734093" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
     </g>
     <g id="ah">
      <g id="ai">
-      <path d="m825.27 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m823.91 262.97v-236.09" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="aj">
-      <use x="825.266504" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="823.913145" y="262.972732" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
     </g>
    </g>
    <g id="ak">
     <g id="al">
      <g id="am">
-      <path d="m32.583 252.24h820.62" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 252.24h820.64" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="an">
       <defs>
        <path id="d" d="m0 0h-3.5" stroke="#000" stroke-width=".8"/>
       </defs>
-      <use x="32.583434" y="252.241244" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="252.241244" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="ao">
-      <text transform="rotate(-0 25.583 256.23)" x="25.583434" y="256.2264" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">0</text>
+      <text transform="rotate(-0 25.561 256.23)" x="25.560921" y="256.2264" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">0</text>
      </g>
     </g>
     <g id="ap">
      <g id="aq">
-      <path d="m32.583 225.41h820.62" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 225.41h820.64" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="ar">
-      <use x="32.583434" y="225.412525" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="225.412525" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="as">
-      <text transform="rotate(-0 25.583 229.4)" x="25.583434" y="229.397681" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">1</text>
+      <text transform="rotate(-0 25.561 229.4)" x="25.560921" y="229.397681" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">1</text>
      </g>
     </g>
     <g id="at">
      <g id="au">
-      <path d="m32.583 198.58h820.62" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 198.58h820.64" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="av">
-      <use x="32.583434" y="198.583805" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="198.583805" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="aw">
-      <text transform="rotate(-0 25.583 202.57)" x="25.583434" y="202.568961" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">2</text>
+      <text transform="rotate(-0 25.561 202.57)" x="25.560921" y="202.568961" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">2</text>
      </g>
     </g>
     <g id="ax">
      <g id="ay">
-      <path d="m32.583 171.76h820.62" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 171.76h820.64" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="az">
-      <use x="32.583434" y="171.755086" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="171.755086" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="ba">
-      <text transform="rotate(-0 25.583 175.74)" x="25.583434" y="175.740242" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">3</text>
+      <text transform="rotate(-0 25.561 175.74)" x="25.560921" y="175.740242" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">3</text>
      </g>
     </g>
     <g id="bb">
      <g id="bc">
-      <path d="m32.583 144.93h820.62" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 144.93h820.64" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="bd">
-      <use x="32.583434" y="144.926366" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="144.926366" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="be">
-      <text transform="rotate(-0 25.583 148.91)" x="25.583434" y="148.911522" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">4</text>
+      <text transform="rotate(-0 25.561 148.91)" x="25.560921" y="148.911522" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">4</text>
      </g>
     </g>
     <g id="bf">
      <g id="bg">
-      <path d="m32.583 118.1h820.62" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 118.1h820.64" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="bh">
-      <use x="32.583434" y="118.097646" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="118.097646" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="bi">
-      <text transform="rotate(-0 25.583 122.08)" x="25.583434" y="122.082803" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">5</text>
+      <text transform="rotate(-0 25.561 122.08)" x="25.560921" y="122.082803" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">5</text>
      </g>
     </g>
     <g id="bj">
      <g id="bk">
-      <path d="m32.583 91.269h820.62" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 91.269h820.64" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="bl">
-      <use x="32.583434" y="91.268927" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="91.268927" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="bm">
-      <text transform="rotate(-0 25.583 95.254)" x="25.583434" y="95.254083" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">6</text>
+      <text transform="rotate(-0 25.561 95.254)" x="25.560921" y="95.254083" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">6</text>
      </g>
     </g>
     <g id="bn">
      <g id="bo">
-      <path d="m32.583 64.44h820.62" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 64.44h820.64" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="bp">
-      <use x="32.583434" y="64.440207" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="64.440207" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="bq">
-      <text transform="rotate(-0 25.583 68.425)" x="25.583434" y="68.425364" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">7</text>
+      <text transform="rotate(-0 25.561 68.425)" x="25.560921" y="68.425364" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">7</text>
      </g>
     </g>
     <g id="br">
      <g id="bs">
-      <path d="m32.583 37.611h820.62" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 37.611h820.64" clip-path="url(#a)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="bt">
-      <use x="32.583434" y="37.611488" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="37.611488" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="bu">
-      <text transform="rotate(-0 25.583 41.597)" x="25.583434" y="41.596644" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">8</text>
+      <text transform="rotate(-0 25.561 41.597)" x="25.560921" y="41.596644" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">8</text>
      </g>
     </g>
    </g>
    <g id="bv">
-    <path d="m69.884 225.41h4.7126l2.0028-26.829h2.014l2.0028-26.829 2.0809 26.829 1.9983-26.829h11.932l2.0073 26.829h6.0218l2.0073-26.829h10.036l2.0073-53.657h6.0218l2.0073 26.829h2.0073l2.0073-26.829h2.0073l2.0073-26.829h2.0073l2.0073 26.829h2.0073l2.0073-26.829h4.0145l2.0073 26.829h4.0145l2.0073-26.829h6.0218l2.0073 26.829h4.0145l2.0073 26.829h2.0073l2.0073 26.829h6.0218l2.0073 26.829h2.0073l2.0073 26.829h8.0291l2.0073 26.829h12.044l2.0073-26.829h44.16l2.0073-26.829h14.051l2.0073 26.829h6.0218l2.0073-26.829h14.051l4.0145-53.657h4.0145l2.0073-26.829h12.044l2.0073-26.829h4.0145l6.0218 80.486h2.0073l2.0073-26.829h2.0073l2.0073-26.829h6.0218l2.0073 26.829h6.0218l2.0073 26.829h2.0073l2.0073 26.829h8.0291l2.0073-26.829h14.051l2.0073 26.829h6.0218l2.0073 26.829h4.0145l2.0073-26.829h22.08l2.0073-26.829h6.0218l2.0073-26.829 2.0073 26.829h6.0218l2.0073 26.829h24.087l2.0073-26.829h16.058l2.0073-26.829h2.0073l2.0073 26.829 2.0073-26.829 2.0073 26.829h16.058l6.0218-80.486 2.0073 26.829 2.0073-53.657 4.0145 53.657 2.0073-53.657 2.0073 26.829h2.0073l2.0073 26.829h4.0145l2.0073-26.829 2.0073 26.829h12.044l2.0073 26.829h2.0073l2.0073-26.829 2.0073 26.829h6.0218l2.0073 26.829h2.0073l4.0145 53.657h36.8l0.66909-26.829 0.66909 26.829h2.6764l0.66909-26.829h3.3454l0.66909-26.829h9.3673l0.66909 26.829h2.0073l0.66909-26.829h2.6764l0.66909-26.829h4.0145l0.66909 26.829h19.404l0.66909-26.829h11.375l0.66909 26.829h14.051l0.66909 26.829h4.0145l0.66909-26.829h6.6909l0.66909 26.829h1.3382l1.3382-53.657h2.6764l0.66909-26.829h3.3454l0.66909-26.829h1.3382l0.66909 26.829h1.3382l0.66909 26.829h4.6836l0.66909-53.657h0.66909l0.66909-26.829h1.3382l0.66909 26.829h2.6764l1.3382-53.657h7.36l0.66909 26.829h0.66909l0.66909 26.829h4.0145l0.66909 53.657h6.0218l0.66909 26.829h26.095l0.66909 26.829h37.469l0.66909-26.829h8.0291v0" clip-path="url(#a)" fill="none" stroke="#28f" stroke-linecap="square" stroke-width="1.5"/>
+    <path d="m69.863 225.41h4.7043l1.9993-26.829h2.0104l1.9993-26.829 2.0772 26.829 1.9948-26.829h11.911l2.0037 26.829h6.0112l2.0037-26.829h10.019l2.0037-53.657h6.0112l2.0037 26.829h2.0037l2.0037-26.829h2.0037l2.0037-26.829h2.0037l2.0037 26.829h2.0037l2.0037-26.829h4.0075l2.0037 26.829h4.0075l2.0037-26.829h6.0112l2.0037 26.829h4.0075l2.0037 26.829h2.0037l2.0037 26.829h6.0112l2.0037 26.829h2.0037l2.0037 26.829h8.0149l2.0037 26.829h12.022l2.0037-26.829h44.082l2.0037-26.829h14.026l2.0037 26.829h6.0112l2.0037-26.829h14.026l4.0075-53.657h4.0075l2.0037-26.829h12.022l2.0037-26.829h4.0075l6.0112 80.486h2.0037l2.0037-26.829h2.0037l2.0037-26.829h6.0112l2.0037 26.829h6.0112l2.0037 26.829h2.0037l2.0037 26.829h8.0149l2.0037-26.829h14.026l2.0037 26.829h6.0112l2.0037 26.829h4.0075l2.0037-26.829h22.041l2.0037-26.829h6.0112l2.0037-26.829 2.0037 26.829h6.0112l2.0037 26.829h24.045l2.0037-26.829h16.03l2.0037-26.829h2.0037l2.0037 26.829 2.0037-26.829 2.0037 26.829h16.03l6.0112-80.486 2.0037 26.829 2.0037-53.657 4.0075 53.657 2.0037-53.657 2.0037 26.829h2.0037l2.0037 26.829h4.0075l2.0037-26.829 2.0037 26.829h12.022l2.0037 26.829h2.0037l2.0037-26.829 2.0037 26.829h6.0112l2.0037 26.829h2.0037l4.0075 53.657h36.735l.66791-26.829.66791 26.829h2.6716l.66791-26.829h3.3396l.66791-26.829h9.3507l.66791 26.829h2.0037l.66791-26.829h2.6716l.66791-26.829h4.0075l.66791 26.829h19.369l.66791-26.829h11.354l.66791 26.829h14.026l.66791 26.829h4.0075l.66791-26.829h6.6791l.66791 26.829h1.3358l1.3358-53.657h2.6716l.66791-26.829h3.3396l.66791-26.829h1.3358l.66791 26.829h1.3358l.66791 26.829h4.6754l.66791-53.657h.66791l.66791-26.829h1.3358l.66791 26.829h2.6716l1.3358-53.657h7.347l.66791 26.829h.66791l.66791 26.829h4.0075l.66791 53.657h6.0112l.66791 26.829h26.048l.66791 26.829h37.403l.66791-26.829h9.3507v0" clip-path="url(#a)" fill="none" stroke="#28f" stroke-linecap="square" stroke-width="1.5"/>
    </g>
    <g id="bw">
-    <path d="m32.583 262.97v-236.09" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
+    <path d="m32.561 262.97v-236.09" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
    </g>
    <g id="bx">
     <path d="m853.2 262.97v-236.09" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
    </g>
    <g id="by">
-    <path d="m32.583 262.97h820.62" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
+    <path d="m32.561 262.97h820.64" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
    </g>
    <g id="bz">
-    <path d="m32.583 26.88h820.62" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
+    <path d="m32.561 26.88h820.64" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
    </g>
    <g id="ca">
-    <text transform="rotate(-0 442.89 20.88)" x="442.891717" y="20.88" font-family="'Noto Sans JP'" font-size="12px" text-anchor="middle">同時接続数の推移</text>
+    <text transform="rotate(-0 442.88 20.88)" x="442.88046" y="20.88" font-family="'Noto Sans JP'" font-size="12px" text-anchor="middle">同時接続数の推移</text>
    </g>
   </g>
   <g id="cb">
    <g id="cc">
-    <path d="m32.583 529.45h820.62v-236.09h-820.62z" fill="#fff"/>
+    <path d="m32.561 529.45h820.64v-236.09h-820.64z" fill="#fff"/>
    </g>
    <g id="cd">
     <g id="ce">
      <g id="cf">
-      <path d="m54.475 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m54.481 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="cg">
-      <use x="54.475049" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="54.480728" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
      <g id="ch">
-      <text transform="translate(18.702 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">06-30 12</text>
+      <text transform="translate(18.707 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">06-30 12</text>
      </g>
     </g>
     <g id="ci">
      <g id="cj">
-      <path d="m150.82 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m150.66 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="ck">
-      <use x="150.823981" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="150.65978" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
      <g id="cl">
-      <text transform="translate(115.05 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-01 00</text>
+      <text transform="translate(114.89 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-01 00</text>
      </g>
     </g>
     <g id="cm">
      <g id="cn">
-      <path d="m247.17 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m246.84 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="co">
-      <use x="247.172913" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="246.838832" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
      <g id="cp">
-      <text transform="translate(211.4 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-01 12</text>
+      <text transform="translate(211.07 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-01 12</text>
      </g>
     </g>
     <g id="cq">
      <g id="cr">
-      <path d="m343.52 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m343.02 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="cs">
-      <use x="343.521845" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="343.017884" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
      <g id="ct">
-      <text transform="translate(307.75 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-02 00</text>
+      <text transform="translate(307.24 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-02 00</text>
      </g>
     </g>
     <g id="cu">
      <g id="cv">
-      <path d="m439.87 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m439.2 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="cw">
-      <use x="439.870777" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="439.196936" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
      <g id="cx">
-      <text transform="translate(404.1 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-02 12</text>
+      <text transform="translate(403.42 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-02 12</text>
      </g>
     </g>
     <g id="cy">
      <g id="cz">
-      <path d="m536.22 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m535.38 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="da">
-      <use x="536.219709" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="535.375988" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
      <g id="db">
-      <text transform="translate(500.45 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-03 00</text>
+      <text transform="translate(499.6 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-03 00</text>
      </g>
     </g>
     <g id="dc">
      <g id="dd">
-      <path d="m632.57 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m631.56 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="de">
-      <use x="632.56864" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="631.55504" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
      <g id="df">
-      <text transform="translate(596.8 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-03 12</text>
+      <text transform="translate(595.78 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-03 12</text>
      </g>
     </g>
     <g id="dg">
      <g id="dh">
-      <path d="m728.92 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m727.73 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="di">
-      <use x="728.917572" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="727.734093" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
      <g id="dj">
-      <text transform="translate(693.14 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-04 00</text>
+      <text transform="translate(691.96 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-04 00</text>
      </g>
     </g>
     <g id="dk">
      <g id="dl">
-      <path d="m825.27 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m823.91 529.45v-236.09" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="dm">
-      <use x="825.266504" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+      <use x="823.913145" y="529.445464" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
      </g>
      <g id="dn">
-      <text transform="translate(789.49 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-04 12</text>
+      <text transform="translate(788.14 563.36) rotate(-30)" font-family="'Noto Sans JP'" font-size="10px">07-04 12</text>
      </g>
     </g>
    </g>
    <g id="do">
     <g id="dp">
      <g id="dq">
-      <path d="m32.583 499.2h820.62" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 499.2h820.64" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="dr">
-      <use x="32.583434" y="499.20218" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="499.20218" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="ds">
-      <text transform="rotate(-0 25.583 503.19)" x="25.583434" y="503.187336" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">50</text>
+      <text transform="rotate(-0 25.561 503.19)" x="25.560921" y="503.187336" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">50</text>
      </g>
     </g>
     <g id="dt">
      <g id="du">
-      <path d="m32.583 460.18h820.62" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 460.18h820.64" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="dv">
-      <use x="32.583434" y="460.178588" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="460.178588" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="dw">
-      <text transform="rotate(-0 25.583 464.16)" x="25.583434" y="464.163744" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">52</text>
+      <text transform="rotate(-0 25.561 464.16)" x="25.560921" y="464.163744" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">52</text>
      </g>
     </g>
     <g id="dx">
      <g id="dy">
-      <path d="m32.583 421.15h820.62" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 421.15h820.64" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="dz">
-      <use x="32.583434" y="421.154996" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="421.154996" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="ea">
-      <text transform="rotate(-0 25.583 425.14)" x="25.583434" y="425.140152" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">54</text>
+      <text transform="rotate(-0 25.561 425.14)" x="25.560921" y="425.140152" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">54</text>
      </g>
     </g>
     <g id="eb">
      <g id="ec">
-      <path d="m32.583 382.13h820.62" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 382.13h820.64" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="ed">
-      <use x="32.583434" y="382.131404" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="382.131404" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="ee">
-      <text transform="rotate(-0 25.583 386.12)" x="25.583434" y="386.11656" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">56</text>
+      <text transform="rotate(-0 25.561 386.12)" x="25.560921" y="386.11656" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">56</text>
      </g>
     </g>
     <g id="ef">
      <g id="eg">
-      <path d="m32.583 343.11h820.62" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 343.11h820.64" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="eh">
-      <use x="32.583434" y="343.107812" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="343.107812" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="ei">
-      <text transform="rotate(-0 25.583 347.09)" x="25.583434" y="347.092968" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">58</text>
+      <text transform="rotate(-0 25.561 347.09)" x="25.560921" y="347.092968" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">58</text>
      </g>
     </g>
     <g id="ej">
      <g id="ek">
-      <path d="m32.583 304.08h820.62" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
+      <path d="m32.561 304.08h820.64" clip-path="url(#c)" fill="none" stroke="#b0b0b0" stroke-linecap="square" stroke-opacity=".3" stroke-width=".8"/>
      </g>
      <g id="el">
-      <use x="32.583434" y="304.08422" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
+      <use x="32.560921" y="304.08422" stroke="#000000" stroke-width=".8" xlink:href="#d"/>
      </g>
      <g id="em">
-      <text transform="rotate(-0 25.583 308.07)" x="25.583434" y="308.069376" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">60</text>
+      <text transform="rotate(-0 25.561 308.07)" x="25.560921" y="308.069376" font-family="'Noto Sans JP'" font-size="10px" text-anchor="end">60</text>
      </g>
     </g>
    </g>
    <g id="en">
-    <path d="m69.884 518.71h8.7294l2.0028-19.512h2.0809l4.0101-39.024h23.971l2.0073-19.512h182.66l2.0073-19.512h128.47l2.0073-19.512 2.0073 19.512h20.073l2.0073-19.512h62.225l2.0073-19.512h20.073l2.0073-19.512 2.0073 19.512h12.044l2.0073-19.512h56.873l0.66909-19.512h3.3454l0.66909-19.512h97.687l0.66909-19.512h101.7v0" clip-path="url(#c)" fill="none" stroke="#28f" stroke-linecap="square" stroke-width="1.5"/>
+    <path d="m69.863 518.71h8.714l1.9993-19.512h2.0772l4.003-39.024h23.929l2.0037-19.512h182.34l2.0037-19.512h128.24l2.0037-19.512 2.0037 19.512h20.037l2.0037-19.512h62.116l2.0037-19.512h20.037l2.0037-19.512 2.0037 19.512h12.022l2.0037-19.512h56.772l.66791-19.512h3.3396l.66791-19.512h97.515l.66791-19.512h102.86v0" clip-path="url(#c)" fill="none" stroke="#28f" stroke-linecap="square" stroke-width="1.5"/>
    </g>
    <g id="eo">
-    <path d="m32.583 529.45v-236.09" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
+    <path d="m32.561 529.45v-236.09" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
    </g>
    <g id="ep">
     <path d="m853.2 529.45v-236.09" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
    </g>
    <g id="eq">
-    <path d="m32.583 529.45h820.62" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
+    <path d="m32.561 529.45h820.64" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
    </g>
    <g id="er">
-    <path d="m32.583 293.35h820.62" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
+    <path d="m32.561 293.35h820.64" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
    </g>
    <g id="es">
-    <text transform="rotate(-0 442.89 287.35)" x="442.891717" y="287.352732" font-family="'Noto Sans JP'" font-size="12px" text-anchor="middle">サーバー数の推移</text>
+    <text transform="rotate(-0 442.88 287.35)" x="442.88046" y="287.352732" font-family="'Noto Sans JP'" font-size="12px" text-anchor="middle">サーバー数の推移</text>
    </g>
   </g>
  </g>
  <defs>
   <clipPath id="a">
-   <rect x="32.583" y="26.88" width="820.62" height="236.09"/>
+   <rect x="32.561" y="26.88" width="820.64" height="236.09"/>
   </clipPath>
   <clipPath id="c">
-   <rect x="32.583" y="293.35" width="820.62" height="236.09"/>
+   <rect x="32.561" y="293.35" width="820.64" height="236.09"/>
   </clipPath>
  </defs>
 </svg>
