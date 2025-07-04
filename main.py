@@ -16,6 +16,13 @@ from matplotlib import font_manager
 from matplotlib.ticker import MaxNLocator
 from matplotlib.backends.backend_svg import FigureCanvasSVG
 
+options = scour.sanitizeOptions()
+options.remove_metadata = True
+options.strip_comments = True
+options.shorten_ids = True
+options.remove_descriptive_elements = True
+options.indent_type = None
+
 font_path = os.path.join(os.path.dirname(__file__), "NotoSansJP-Medium.ttf")
 font_manager.fontManager.addfont(font_path)
 prop = font_manager.FontProperties(fname=font_path)
@@ -270,4 +277,4 @@ for bot in latest_data.keys():
     canvas.print_svg(buf)
     svg_raw = buf.getvalue()
     with open("output/"+bot+".svg", "w", encoding="utf-8") as f:
-        f.write(svg_raw)
+        f.write(scour.scourString(svg_raw, options=options))
