@@ -18,11 +18,28 @@ from matplotlib.ticker import MaxNLocator
 from matplotlib.backends.backend_svg import FigureCanvasSVG
 
 options = scour.sanitizeOptions()
-options.remove_metadata = True
-options.strip_comments = True
-options.shorten_ids = True
-options.remove_descriptive_elements = True
-options.indent_type = None
+opts.remove_metadata = True
+opts.remove_descriptive_elements = True
+opts.remove_titles = True
+opts.remove_descriptions = True
+opts.enable_comment_stripping = True
+opts.keep_unreferenced_defs = False
+opts.keep_editor_data = False
+opts.disable_embed_rasters = True
+opts.enable_id_stripping = True
+opts.shorten_ids = True
+opts.disable_group_collapsing = False
+opts.create_groups = True
+opts.disable_simplify_colors = False
+opts.disable_style_to_xml = False
+opts.enable_viewboxing = True
+opts.renderer_workaround = False
+opts.set_precision = 5
+opts.set_c_precision = 5
+opts.strip_xml_prolog = True
+opts.strip_xml_space = True
+opts.indent_type = None
+opts.no_line_breaks = True
 
 font_path = os.path.join(os.path.dirname(__file__), "NotoSansJP-Medium.ttf")
 font_manager.fontManager.addfont(font_path)
