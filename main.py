@@ -185,28 +185,38 @@ with open("data/history.json", mode="w") as f:
     f.write(json.dumps(online_data))
 
 bot_history = {}
+summary = {}
+
 for bot in latest_data.keys():
     time_list = []
     server_available = latest_data[bot].get("server") is not None
     server_list = []
     reading_available = latest_data[bot].get("reading") is not None
     reading_list = []
+    total = 0
+    up = 0
+    summary[bot] = {}
     for hour in online_data.keys():
         if bot in online_data[hour]:
+            total += 1
             date = datetime.fromtimestamp(int(hour), timezone(timedelta(hours=9)))
             time_list.append(date)
             if online_data[hour][bot]["online"]:
+                up += 1
                 if "reading" in online_data[hour][bot]:
                     reading_list.append(online_data[hour][bot]["reading"])
+                    summary[bot]["reading"] = math.floor(up/total*100*1000)/1000
                 else:
                     reading_list.append(None)
                 if "server" in online_data[hour][bot]:
                     server_list.append(online_data[hour][bot]["server"])
+                    summary[bot]["server"] = math.floor(up/total*100*1000)/1000
                 else:
                     server_list.append(None)
             else:
                 reading_list.append(None)
                 server_list.append(None)
+    summary[bot]["uptime"] = math.floor(up/total*100*1000)/1000
 
     spans = []
     in_off = False
@@ -224,25 +234,25 @@ for bot in latest_data.keys():
 
     if in_off:
         spans.append((span_start, time_list[-1]))
-    
+
     # どちらもFalseの場合はグラフ生成を中止
     if not reading_available and not server_available:
         print(f"Bot {bot}: 読み上げ・サーバー両方のデータが利用できないため、グラフを生成しません")
         continue
-    
+
     # 利用可能なグラフの数に応じてレイアウトを決定
     num_plots = sum([reading_available, server_available])
-    
+
     if num_plots == 2:
         # 両方のグラフを作成（上下に配置）
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
-        
+
         # 上のグラフ: 同時接続数
         ax1.plot(time_list, reading_list, label="同時接続数", linewidth=1.5, color='#2288ff')
-        
+
         for span_start, span_end in spans:
             ax1.axvspan(span_start, span_end, color="gray", alpha=0.3)
-        
+
         ax1.yaxis.set_major_locator(MaxNLocator(integer=True))
         ax1.yaxis.get_major_formatter().set_useOffset(False)
 #        ax1.set_ylabel("同時接続数")
@@ -263,7 +273,7 @@ for bot in latest_data.keys():
         ax2.set_title("サーバー数の推移")
 #        ax2.legend(loc="upper right")
         ax2.grid(True, alpha=0.3)
-        
+
     else:
         # 1つのグラフのみ作成
         fig, ax = plt.subplots(figsize=(12, 4))
@@ -276,10 +286,10 @@ for bot in latest_data.keys():
             ax.plot(time_list, server_list, label="サーバー数", linewidth=1.5, color='#2288ff')
             ax.set_title("サーバー数の推移")
 #            ax.set_ylabel("サーバー数")
-        
+
         for span_start, span_end in spans:
             ax.axvspan(span_start, span_end, color="gray", alpha=0.3)
-        
+
         ax.set_xlabel("時刻")
         ax.set_title("日時別の使用状況")
 #        ax.legend(loc="upper right")
@@ -296,3 +306,6 @@ for bot in latest_data.keys():
     svg_raw = buf.getvalue()
     with open("output/"+bot+".svg", "w", encoding="utf-8") as f:
         f.write(scour.scourString(svg_raw, options=opts))
+
+with open("data/summary.json", mode="w") as f:
+    f.write(json.dumps(summary))
