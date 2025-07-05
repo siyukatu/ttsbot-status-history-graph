@@ -216,7 +216,7 @@ for bot in latest_data.keys():
             else:
                 reading_list.append(None)
                 server_list.append(None)
-    summary[bot]["uptime"] = math.floor(up/total*100*1000)/1000
+    summary[bot]["uptime"] = str(math.floor(up/total*100*1000)/1000)+"%"
 
     spans = []
     in_off = False
