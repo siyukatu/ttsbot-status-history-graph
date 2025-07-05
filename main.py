@@ -205,12 +205,12 @@ for bot in latest_data.keys():
                 up += 1
                 if "reading" in online_data[hour][bot]:
                     reading_list.append(online_data[hour][bot]["reading"])
-                    summary[bot]["reading"] = math.floor(up/total*100*1000)/1000
+                    summary[bot]["reading"] = online_data[hour][bot]["reading"]
                 else:
                     reading_list.append(None)
                 if "server" in online_data[hour][bot]:
                     server_list.append(online_data[hour][bot]["server"])
-                    summary[bot]["server"] = math.floor(up/total*100*1000)/1000
+                    summary[bot]["server"] = online_data[hour][bot]["server"]
                 else:
                     server_list.append(None)
             else:
