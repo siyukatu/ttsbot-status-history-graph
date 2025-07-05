@@ -129,7 +129,7 @@ try:
         with open("data/history.json") as f:
             online_data = json.loads(f.read())
     for hour in online_data.keys():
-        if int(hour) < now_hour_id - 14 * 24 * 60 * 60:
+        if int(hour) < now_hour_id - 28 * 24 * 60 * 60:
             del online_data[hour]
 except:pass
 
