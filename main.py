@@ -203,7 +203,8 @@ for bot in latest_data.keys():
             date = datetime.fromtimestamp(int(hour), timezone(timedelta(hours=9)))
             time_list.append(date)
             if online_data[hour][bot]["online"]:
-                up += 1
+                if "reading" in online_data[hour][bot] or "server" in online_data[hour][bot]:
+                    up += 1
                 if "reading" in online_data[hour][bot]:
                     reading_list.append(online_data[hour][bot]["reading"])
                     summary[bot]["reading"] = online_data[hour][bot]["reading"]
