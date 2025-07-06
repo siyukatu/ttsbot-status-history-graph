@@ -65,7 +65,7 @@ def get_median(data):
         mdn = score[half]
     return mdn
 
-for p in glob.glob('output/*.png'):
+for p in glob.glob('output/*.png')+glob.glob('output/*.svg'):
     if os.path.isfile(p):
         os.remove(p)
 
