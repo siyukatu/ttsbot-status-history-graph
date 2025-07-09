@@ -309,10 +309,10 @@ for bot in latest_data.keys():
     svg_raw = buf.getvalue()
     with open("output/"+bot+".svg", "w", encoding="utf-8") as f:
         f.write(scour.scourString(svg_raw, options=opts))
-    graph_list.append(bot+".svg")
+    graph_list.append(bot)
 
 with open("data/summary.json", mode="w") as f:
     f.write(json.dumps(summary))
 
 with open("output/graph_list.html", mode="w") as f:
-    f.write('<img src="'+('"/><img src="'.join(graph_list))+'"/>')
+    f.write('<img src="'+('.svg"/><br><img src="'.join(graph_list))+'.svg?_='+str(now_hour_id)+'"/>')
