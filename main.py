@@ -187,6 +187,7 @@ with open("data/history.json", mode="w") as f:
 
 bot_history = {}
 summary = {}
+graph_list = []
 
 for bot in latest_data.keys():
     time_list = []
@@ -308,6 +309,10 @@ for bot in latest_data.keys():
     svg_raw = buf.getvalue()
     with open("output/"+bot+".svg", "w", encoding="utf-8") as f:
         f.write(scour.scourString(svg_raw, options=opts))
+    graph_list.push(bot+".svg")
 
 with open("data/summary.json", mode="w") as f:
     f.write(json.dumps(summary))
+
+with open("output/graph_list.html", mode="w") as f:
+    f.write('<img src="'+('"/><img src="'.join(graph_list))+'"/>')
