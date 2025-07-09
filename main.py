@@ -309,7 +309,7 @@ for bot in latest_data.keys():
     svg_raw = buf.getvalue()
     with open("output/"+bot+".svg", "w", encoding="utf-8") as f:
         f.write(scour.scourString(svg_raw, options=opts))
-    graph_list.push(bot+".svg")
+    graph_list.append(bot+".svg")
 
 with open("data/summary.json", mode="w") as f:
     f.write(json.dumps(summary))
